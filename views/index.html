@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>SamsungConnect Status</title>
+    <meta name="description" content="Welcome to SmartThings&#39;s home for real-time and historical data on system performance.">
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dka575ofm4ao0.cloudfront.net/assets/base/apple-touch-icon-144x144-precomposed-7d3097763fe154094a05832a78198472c19987c237559e8417338710b0e8523d.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dka575ofm4ao0.cloudfront.net/assets/base/apple-touch-icon-114x114-precomposed-22c166b3c3faf171f4ed497f9acc2e1798da85f2bd6ad419cdb38bc49ccdb17f.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dka575ofm4ao0.cloudfront.net/assets/base/apple-touch-icon-72x72-precomposed-0a000280b9b1502ff141a54f42107906a2c4d6557f5caf97a04c6e6d2f44e3b6.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://dka575ofm4ao0.cloudfront.net/assets/base/apple-touch-icon-57x57-precomposed-7a352593336de24a9ac19cec1cd60ae5ef50fc8f84365cebb665db7222db476d.png" />
+
+    <link rel="shortcut icon" href='//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/4380/0YvVZgLlR4CROYwN60HK'>
+
+    <link rel="alternate" type="application/atom+xml" href="https://status.smartthings.com/history.atom" title="SmartThings Status History - Atom Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://status.smartthings.com/history.rss" title="SmartThings Status History - RSS Feed">
+
+    <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ"/>
+
+
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://status.smartthings.com/history.atom" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="4Xe8npMewqwdW2InWnYACaazYr2shQe61u+k+viiF0+qWyRigQGOhgy6EeMW4w4Ubl7fEz+chclBgdCaxlVJqA==" />
+
+    <!-- Le styles -->
+    
+    <link rel="stylesheet" media="all" href="https://dka575ofm4ao0.cloudfront.net/assets/status_manifest-7f59e19b2fc6b1640383008e0c01a1bb2ab3d6fac86dee27f41c66de9ddc46a9.css" />
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script>
+      window.pageColorData = {"blue":"#3498DB","border":"#E0E0E0","body_background":"#ffffff","font":"#333333","graph":"#1c808a","green":"#228b22","light_font":"#AAAAAA","link":"#1c808a","orange":"#e67e22","red":"#e74c3c","yellow":"#ffb90f"};
+    </script>
+    <style>
+
+
+
+
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current {
+    background-color:#ffffff;
+  }
+
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a {
+    color:#AAAAAA;
+  }
+
+
+
+
+
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color, hr, .tooltip-base, .markdown-display table {
+    border-color:#E0E0E0;
+  }
+
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+
+
+
+/* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#ffb90f;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#ffb90f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#ffb90f;
+  }
+
+
+
+
+
+
+/* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#228b22;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#228b22;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#1c808a;
+  }
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#1c808a;
+  }
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 0.8;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 0.5;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 0.3;
+  }
+</style>
+
+
+    <!-- custom css -->
+        <link rel="stylesheet" type="text/css" href="//dka575ofm4ao0.cloudfront.net/page_display_customizations-custom_css_externals/4330/external20140514-4337-uie9kq.css">
+
+
+    <!-- Le HTML5 shim -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- injection for static -->
+
+
+    
+  </head>
+
+
+  <body class="status index status-minor">
+
+    
+
+
+  <div class="status-page-tour-info" data-js-hook="status-page-tour-info" style="display:none">
+  <div class="container inner">
+    Welcome to the demo status page. <a href="#" data-js-hook="restart-tour">Take the tour</a>.
+  </div>
+</div>
+
+
+  <div class="layout-content status status-index starter">
+      <div class="masthead-container basic">
+
+    <div class="masthead has-logo">
+        <div class="logo-container">
+          <a href="https://www.smartthings.com"><img style="" src="//dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/4380/EP2ZMWZ3TEWdlHwGpX9J" alt="Ep2zmwz3tewdlhwgpx9j" /></a>
+        </div>
+
+      
+
+<div class="updates-dropdown-container" data-js-hook="updates-dropdown-container">
+  <a href="#" data-js-hook="show-updates-dropdown" id="show-updates-dropdown" class="show-updates-dropdown">
+
+  </a>
+  <div class="updates-dropdown" data-js-hook="updates-dropdown" style="display:none">
+    <div class="updates-dropdown-nav nav-items-6">
+        <a href="#updates-dropdown-email" id="updates-dropdown-email-btn">
+          <span class="icon-container email">
+        </a>
+        <a href="#updates-dropdown-sms" id="updates-dropdown-sms-btn">
+          <span class="icon-container sms">
+        </a>
+        <a href="#updates-dropdown-twitter" id="updates-dropdown-twitter-btn">
+          <span class="icon-container twitter">
+        </a>
+        <a href="#updates-dropdown-support" id="updates-dropdown-support-btn">
+          <span class="icon-container support">
+        </a>
+      <a href="#updates-dropdown-atom" id="updates-dropdown-atom-btn">
+        <span class="icon-container rss">
+      </a>
+      <a href="#" data-js-hook="updates-dropdown-close" id="updates-dropdown-close-btn">
+        x
+      </a>
+    </div>
+    <div class="updates-dropdown-sections-container">
+
+        <div class="updates-dropdown-section email" id="updates-dropdown-email" style="display:none">
+          <div class="directions">
+            Get email notifications whenever SmartThings creates or updates an incident.
+          </div>
+          <form id="subscribe-form-email" action="/subscribe.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+              <!-- make sure not to put cookie values in here since this gets cached -->
+              <input name="email" id="email" type="text" placeholder="Email Address" class="full-width" data-js-hook="email-notification-field">
+              <input type="submit" value="Subscribe via Email" class="flat-button full-width" id="subscribe-btn-email" data-disabled-text="Subscribing..." data-revert-on-success="true">
+</form>        </div>
+
+        <div class="updates-dropdown-section phone" id="updates-dropdown-sms" style="display:none">
+          <div class="directions">
+              Get SMS notifications whenever SmartThings <strong>creates</strong> or <strong>resolves</strong> an incident.
+          </div>
+          <form id="subscribe-form-sms" action="/subscribe.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+            <div class="control-group">
+              <div class="controls externalities-sms-container">
+                <!-- make sure not to put cookie values in here since this gets cached -->
+                <select name="phone_country" id="phone-country" data-js-hook="phone-country"><option value="af">Afghanistan (+93)</option>
+<option value="al">Albania (+355)</option>
+<option value="dz">Algeria (+213)</option>
+<option value="as">American Samoa (+1)</option>
+<option value="ad">Andorra (+376)</option>
+<option value="ao">Angola (+244)</option>
+<option value="ai">Anguilla (+1)</option>
+<option value="ag">Antigua and Barbuda (+1)</option>
+<option value="ar">Argentina (+54)</option>
+<option value="am">Armenia (+374)</option>
+<option value="aw">Aruba (+297)</option>
+<option value="au">Australia/Cocos/Christmas Island (+61)</option>
+<option value="at">Austria (+43)</option>
+<option value="az">Azerbaijan (+994)</option>
+<option value="bs">Bahamas (+1)</option>
+<option value="bh">Bahrain (+973)</option>
+<option value="bd">Bangladesh (+880)</option>
+<option value="bb">Barbados (+1)</option>
+<option value="by">Belarus (+375)</option>
+<option value="be">Belgium (+32)</option>
+<option value="bz">Belize (+501)</option>
+<option value="bj">Benin (+229)</option>
+<option value="bm">Bermuda (+1)</option>
+<option value="bo">Bolivia (+591)</option>
+<option value="ba">Bosnia and Herzegovina (+387)</option>
+<option value="bw">Botswana (+267)</option>
+<option value="br">Brazil (+55)</option>
+<option value="bn">Brunei (+673)</option>
+<option value="bg">Bulgaria (+359)</option>
+<option value="bf">Burkina Faso (+226)</option>
+<option value="bi">Burundi (+257)</option>
+<option value="kh">Cambodia (+855)</option>
+<option value="cm">Cameroon (+237)</option>
+<option value="ca">Canada (+1)</option>
+<option value="cv">Cape Verde (+238)</option>
+<option value="ky">Cayman Islands (+1)</option>
+<option value="cf">Central Africa (+236)</option>
+<option value="td">Chad (+235)</option>
+<option value="cl">Chile (+56)</option>
+<option value="cn">China (+86)</option>
+<option value="co">Colombia (+57)</option>
+<option value="km">Comoros (+269)</option>
+<option value="cg">Congo (+242)</option>
+<option value="cd">Congo, Dem Rep (+243)</option>
+<option value="cr">Costa Rica (+506)</option>
+<option value="hr">Croatia (+385)</option>
+<option value="cy">Cyprus (+357)</option>
+<option value="cz">Czech Republic (+420)</option>
+<option value="dk">Denmark (+45)</option>
+<option value="dj">Djibouti (+253)</option>
+<option value="dm">Dominica (+1)</option>
+<option value="do">Dominican Republic (+1)</option>
+<option value="eg">Egypt (+20)</option>
+<option value="sv">El Salvador (+503)</option>
+<option value="gq">Equatorial Guinea (+240)</option>
+<option value="ee">Estonia (+372)</option>
+<option value="et">Ethiopia (+251)</option>
+<option value="fo">Faroe Islands (+298)</option>
+<option value="fj">Fiji (+679)</option>
+<option value="fi">Finland/Aland Islands (+358)</option>
+<option value="fr">France (+33)</option>
+<option value="gf">French Guiana (+594)</option>
+<option value="pf">French Polynesia (+689)</option>
+<option value="ga">Gabon (+241)</option>
+<option value="gm">Gambia (+220)</option>
+<option value="ge">Georgia (+995)</option>
+<option value="de">Germany (+49)</option>
+<option value="gh">Ghana (+233)</option>
+<option value="gi">Gibraltar (+350)</option>
+<option value="gr">Greece (+30)</option>
+<option value="gl">Greenland (+299)</option>
+<option value="gd">Grenada (+1)</option>
+<option value="gp">Guadeloupe (+590)</option>
+<option value="gu">Guam (+1)</option>
+<option value="gt">Guatemala (+502)</option>
+<option value="gn">Guinea (+224)</option>
+<option value="gy">Guyana (+592)</option>
+<option value="ht">Haiti (+509)</option>
+<option value="hn">Honduras (+504)</option>
+<option value="hk">Hong Kong (+852)</option>
+<option value="hu">Hungary (+36)</option>
+<option value="is">Iceland (+354)</option>
+<option value="in">India (+91)</option>
+<option value="id">Indonesia (+62)</option>
+<option value="ir">Iran (+98)</option>
+<option value="iq">Iraq (+964)</option>
+<option value="ie">Ireland (+353)</option>
+<option value="il">Israel (+972)</option>
+<option value="it">Italy (+39)</option>
+<option value="jm">Jamaica (+1)</option>
+<option value="jp">Japan (+81)</option>
+<option value="jo">Jordan (+962)</option>
+<option value="ke">Kenya (+254)</option>
+<option value="kr">Korea, Republic of (+82)</option>
+<option value="kw">Kuwait (+965)</option>
+<option value="kg">Kyrgyzstan (+996)</option>
+<option value="la">Laos (+856)</option>
+<option value="lv">Latvia (+371)</option>
+<option value="lb">Lebanon (+961)</option>
+<option value="ls">Lesotho (+266)</option>
+<option value="lr">Liberia (+231)</option>
+<option value="ly">Libya (+218)</option>
+<option value="li">Liechtenstein (+423)</option>
+<option value="lt">Lithuania (+370)</option>
+<option value="lu">Luxembourg (+352)</option>
+<option value="mo">Macao (+853)</option>
+<option value="mk">Macedonia (+389)</option>
+<option value="mg">Madagascar (+261)</option>
+<option value="mw">Malawi (+265)</option>
+<option value="my">Malaysia (+60)</option>
+<option value="mv">Maldives (+960)</option>
+<option value="ml">Mali (+223)</option>
+<option value="mt">Malta (+356)</option>
+<option value="mq">Martinique (+596)</option>
+<option value="mr">Mauritania (+222)</option>
+<option value="mu">Mauritius (+230)</option>
+<option value="mx">Mexico (+52)</option>
+<option value="mc">Monaco (+377)</option>
+<option value="mn">Mongolia (+976)</option>
+<option value="me">Montenegro (+382)</option>
+<option value="ms">Montserrat (+1)</option>
+<option value="ma">Morocco/Western Sahara (+212)</option>
+<option value="mz">Mozambique (+258)</option>
+<option value="na">Namibia (+264)</option>
+<option value="np">Nepal (+977)</option>
+<option value="nl">Netherlands (+31)</option>
+<option value="nz">New Zealand (+64)</option>
+<option value="ni">Nicaragua (+505)</option>
+<option value="ne">Niger (+227)</option>
+<option value="ng">Nigeria (+234)</option>
+<option value="no">Norway (+47)</option>
+<option value="om">Oman (+968)</option>
+<option value="pk">Pakistan (+92)</option>
+<option value="ps">Palestinian Territory (+970)</option>
+<option value="pa">Panama (+507)</option>
+<option value="py">Paraguay (+595)</option>
+<option value="pe">Peru (+51)</option>
+<option value="ph">Philippines (+63)</option>
+<option value="pl">Poland (+48)</option>
+<option value="pt">Portugal (+351)</option>
+<option value="pr">Puerto Rico (+1)</option>
+<option value="qa">Qatar (+974)</option>
+<option value="re">Reunion/Mayotte (+262)</option>
+<option value="ro">Romania (+40)</option>
+<option value="ru">Russia/Kazakhstan (+7)</option>
+<option value="rw">Rwanda (+250)</option>
+<option value="ws">Samoa (+685)</option>
+<option value="sm">San Marino (+378)</option>
+<option value="sa">Saudi Arabia (+966)</option>
+<option value="sn">Senegal (+221)</option>
+<option value="rs">Serbia (+381)</option>
+<option value="sc">Seychelles (+248)</option>
+<option value="sl">Sierra Leone (+232)</option>
+<option value="sg">Singapore (+65)</option>
+<option value="sk">Slovakia (+421)</option>
+<option value="si">Slovenia (+386)</option>
+<option value="za">South Africa (+27)</option>
+<option value="es">Spain (+34)</option>
+<option value="lk">Sri Lanka (+94)</option>
+<option value="kn">St Kitts and Nevis (+1)</option>
+<option value="lc">St Lucia (+1)</option>
+<option value="vc">St Vincent Grenadines (+1)</option>
+<option value="sd">Sudan (+249)</option>
+<option value="sr">Suriname (+597)</option>
+<option value="sz">Swaziland (+268)</option>
+<option value="se">Sweden (+46)</option>
+<option value="ch">Switzerland (+41)</option>
+<option value="sy">Syria (+963)</option>
+<option value="tw">Taiwan (+886)</option>
+<option value="tj">Tajikistan (+992)</option>
+<option value="tz">Tanzania (+255)</option>
+<option value="th">Thailand (+66)</option>
+<option value="tg">Togo (+228)</option>
+<option value="to">Tonga (+676)</option>
+<option value="tt">Trinidad and Tobago (+1)</option>
+<option value="tn">Tunisia (+216)</option>
+<option value="tr">Turkey (+90)</option>
+<option value="tc">Turks and Caicos Islands (+1)</option>
+<option value="ug">Uganda (+256)</option>
+<option value="ua">Ukraine (+380)</option>
+<option value="ae">United Arab Emirates (+971)</option>
+<option value="gb">United Kingdom (+44)</option>
+<option selected="selected" value="us">United States (+1)</option>
+<option value="uy">Uruguay (+598)</option>
+<option value="uz">Uzbekistan (+998)</option>
+<option value="ve">Venezuela (+58)</option>
+<option value="vn">Vietnam (+84)</option>
+<option value="vg">Virgin Islands, British (+1)</option>
+<option value="vi">Virgin Islands, U.S. (+1)</option>
+<option value="ye">Yemen (+967)</option>
+<option value="zm">Zambia (+260)</option>
+<option value="zw">Zimbabwe (+263)</option></select>
+                <input name="phone_number" id="phone-number" type="text" placeholder="ex. 6505551234" class="prepend full-width" data-js-hook="sms-notification-field">
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+            <input type="submit" value="Subscribe via SMS" class="flat-button full-width" id="subscribe-btn-sms" data-disabled-text="Subscribing..." data-revert-on-success="true">
+            <div style="text-align:center;margin-top:10px;font-size:12px;line-height:14px;margin-bottom:-6px;" class="small">Message and data rates may apply. Go to https://www.atlassian.com/legal/customer-agreement for terms and conditions.</div>
+</form>        </div>
+
+
+        <div class="updates-dropdown-section twitter" id="updates-dropdown-twitter" style="display:none">
+          <a href="https://twitter.com/smartthings" class="twitter-follow-button" data-show-count="false" data-show-screen-name="true" data-width="59px">Follow @smartthings</a>
+          or&nbsp;
+          <a href="http://www.twitter.com/smartthings" target="_blank">view our profile</a>.
+          <style>
+            .twitter-follow-button {
+              margin-bottom: -6px;
+            }
+          </style>
+
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+
+        <div class="updates-dropdown-section support" id="updates-dropdown-support" style="display:none">
+          Visit our <a target="_blank" href="https://support.smartthings.com">support site</a>.
+        </div>
+
+      <div class="updates-dropdown-section atom" id="updates-dropdown-atom">
+        Get the <a href="https://status.smartthings.com/history.atom" target="_blank">Atom Feed</a> or <a href="https://status.smartthings.com/history.rss" target="_blank">RSS Feed</a>.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <div class="clearfix"></div>
+    </div>
+
+</div>
+ <!-- this is outside of the .container so that the cover photo can go full width on mobile -->
+
+
+    <div class="container">
+        <div class="unresolved-incidents">
+            <div class="unresolved-incident impact-minor">
+              <div class="incident-title font-large">
+                <a class="actual-title with-ellipsis" href="/incidents/d87m9x011lv1">EU Degraded App Performance</a>
+                <a data-toggle="modal" class="subscribe" id="btn-subscribe-modal-d87m9x011lv1" href="#subscribe-modal-d87m9x011lv1">Subscribe</a>
+              </div>
+              <div class="updates font-regular">
+                  <div class="update">
+                    <strong>Investigating</strong> - We are investigating an issue causing long app load times or occasional errors in the new and Classic SmartThings apps for some users. We will continue to provide updates as they are available.
+                    <br>
+                      <small>Mar 23, 12:07 EDT</small>
+                  </div>
+              </div>
+            </div>
+            
+  <div class="modal hide fade modal-open-incident-subscribe" id="subscribe-modal-d87m9x011lv1" style="display: none">
+    <div class="modal-header">
+      <a href="#" data-dismiss="modal" class="close">×</a>
+      <h4>Subscribe to Incident</h4>
+    </div>
+    <form id="subscribe-form-d87m9x011lv1" action="/subscribe.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="hidden" name="incident_code" id="incident_code" value="d87m9x011lv1" />
+      <div class="modal-body">
+        <p style="margin-bottom:25px">
+          Subscribe to updates for <strong><var>EU Degraded App Performance</var></strong> via email and/or SMS. 
+          Whenever an update is posted, you&#39;ll receive a notification.
+        </p>
+
+          <div class="control-group">
+            <label>Get Updates Via Email</label>
+            <div class="controls">
+              <input type="text" name="email" id="email-d87m9x011lv1" placeholder="Email Address" data-js-hook="email" class="full-width" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label>Get Updates Via Text Message</label>
+            <div class="controls phone-number" data-js-hook="modal-open-incident-subscribe-phone-number">
+              <div class="row">
+                <select name="phone_country" id="phone-country-d87m9x011lv1" data-js-hook="phone-country" class="span6"><option value="af">Afghanistan (+93)</option>
+<option value="al">Albania (+355)</option>
+<option value="dz">Algeria (+213)</option>
+<option value="as">American Samoa (+1)</option>
+<option value="ad">Andorra (+376)</option>
+<option value="ao">Angola (+244)</option>
+<option value="ai">Anguilla (+1)</option>
+<option value="ag">Antigua and Barbuda (+1)</option>
+<option value="ar">Argentina (+54)</option>
+<option value="am">Armenia (+374)</option>
+<option value="aw">Aruba (+297)</option>
+<option value="au">Australia/Cocos/Christmas Island (+61)</option>
+<option value="at">Austria (+43)</option>
+<option value="az">Azerbaijan (+994)</option>
+<option value="bs">Bahamas (+1)</option>
+<option value="bh">Bahrain (+973)</option>
+<option value="bd">Bangladesh (+880)</option>
+<option value="bb">Barbados (+1)</option>
+<option value="by">Belarus (+375)</option>
+<option value="be">Belgium (+32)</option>
+<option value="bz">Belize (+501)</option>
+<option value="bj">Benin (+229)</option>
+<option value="bm">Bermuda (+1)</option>
+<option value="bo">Bolivia (+591)</option>
+<option value="ba">Bosnia and Herzegovina (+387)</option>
+<option value="bw">Botswana (+267)</option>
+<option value="br">Brazil (+55)</option>
+<option value="bn">Brunei (+673)</option>
+<option value="bg">Bulgaria (+359)</option>
+<option value="bf">Burkina Faso (+226)</option>
+<option value="bi">Burundi (+257)</option>
+<option value="kh">Cambodia (+855)</option>
+<option value="cm">Cameroon (+237)</option>
+<option value="ca">Canada (+1)</option>
+<option value="cv">Cape Verde (+238)</option>
+<option value="ky">Cayman Islands (+1)</option>
+<option value="cf">Central Africa (+236)</option>
+<option value="td">Chad (+235)</option>
+<option value="cl">Chile (+56)</option>
+<option value="cn">China (+86)</option>
+<option value="co">Colombia (+57)</option>
+<option value="km">Comoros (+269)</option>
+<option value="cg">Congo (+242)</option>
+<option value="cd">Congo, Dem Rep (+243)</option>
+<option value="cr">Costa Rica (+506)</option>
+<option value="hr">Croatia (+385)</option>
+<option value="cy">Cyprus (+357)</option>
+<option value="cz">Czech Republic (+420)</option>
+<option value="dk">Denmark (+45)</option>
+<option value="dj">Djibouti (+253)</option>
+<option value="dm">Dominica (+1)</option>
+<option value="do">Dominican Republic (+1)</option>
+<option value="eg">Egypt (+20)</option>
+<option value="sv">El Salvador (+503)</option>
+<option value="gq">Equatorial Guinea (+240)</option>
+<option value="ee">Estonia (+372)</option>
+<option value="et">Ethiopia (+251)</option>
+<option value="fo">Faroe Islands (+298)</option>
+<option value="fj">Fiji (+679)</option>
+<option value="fi">Finland/Aland Islands (+358)</option>
+<option value="fr">France (+33)</option>
+<option value="gf">French Guiana (+594)</option>
+<option value="pf">French Polynesia (+689)</option>
+<option value="ga">Gabon (+241)</option>
+<option value="gm">Gambia (+220)</option>
+<option value="ge">Georgia (+995)</option>
+<option value="de">Germany (+49)</option>
+<option value="gh">Ghana (+233)</option>
+<option value="gi">Gibraltar (+350)</option>
+<option value="gr">Greece (+30)</option>
+<option value="gl">Greenland (+299)</option>
+<option value="gd">Grenada (+1)</option>
+<option value="gp">Guadeloupe (+590)</option>
+<option value="gu">Guam (+1)</option>
+<option value="gt">Guatemala (+502)</option>
+<option value="gn">Guinea (+224)</option>
+<option value="gy">Guyana (+592)</option>
+<option value="ht">Haiti (+509)</option>
+<option value="hn">Honduras (+504)</option>
+<option value="hk">Hong Kong (+852)</option>
+<option value="hu">Hungary (+36)</option>
+<option value="is">Iceland (+354)</option>
+<option value="in">India (+91)</option>
+<option value="id">Indonesia (+62)</option>
+<option value="ir">Iran (+98)</option>
+<option value="iq">Iraq (+964)</option>
+<option value="ie">Ireland (+353)</option>
+<option value="il">Israel (+972)</option>
+<option value="it">Italy (+39)</option>
+<option value="jm">Jamaica (+1)</option>
+<option value="jp">Japan (+81)</option>
+<option value="jo">Jordan (+962)</option>
+<option value="ke">Kenya (+254)</option>
+<option value="kr">Korea, Republic of (+82)</option>
+<option value="kw">Kuwait (+965)</option>
+<option value="kg">Kyrgyzstan (+996)</option>
+<option value="la">Laos (+856)</option>
+<option value="lv">Latvia (+371)</option>
+<option value="lb">Lebanon (+961)</option>
+<option value="ls">Lesotho (+266)</option>
+<option value="lr">Liberia (+231)</option>
+<option value="ly">Libya (+218)</option>
+<option value="li">Liechtenstein (+423)</option>
+<option value="lt">Lithuania (+370)</option>
+<option value="lu">Luxembourg (+352)</option>
+<option value="mo">Macao (+853)</option>
+<option value="mk">Macedonia (+389)</option>
+<option value="mg">Madagascar (+261)</option>
+<option value="mw">Malawi (+265)</option>
+<option value="my">Malaysia (+60)</option>
+<option value="mv">Maldives (+960)</option>
+<option value="ml">Mali (+223)</option>
+<option value="mt">Malta (+356)</option>
+<option value="mq">Martinique (+596)</option>
+<option value="mr">Mauritania (+222)</option>
+<option value="mu">Mauritius (+230)</option>
+<option value="mx">Mexico (+52)</option>
+<option value="mc">Monaco (+377)</option>
+<option value="mn">Mongolia (+976)</option>
+<option value="me">Montenegro (+382)</option>
+<option value="ms">Montserrat (+1)</option>
+<option value="ma">Morocco/Western Sahara (+212)</option>
+<option value="mz">Mozambique (+258)</option>
+<option value="na">Namibia (+264)</option>
+<option value="np">Nepal (+977)</option>
+<option value="nl">Netherlands (+31)</option>
+<option value="nz">New Zealand (+64)</option>
+<option value="ni">Nicaragua (+505)</option>
+<option value="ne">Niger (+227)</option>
+<option value="ng">Nigeria (+234)</option>
+<option value="no">Norway (+47)</option>
+<option value="om">Oman (+968)</option>
+<option value="pk">Pakistan (+92)</option>
+<option value="ps">Palestinian Territory (+970)</option>
+<option value="pa">Panama (+507)</option>
+<option value="py">Paraguay (+595)</option>
+<option value="pe">Peru (+51)</option>
+<option value="ph">Philippines (+63)</option>
+<option value="pl">Poland (+48)</option>
+<option value="pt">Portugal (+351)</option>
+<option value="pr">Puerto Rico (+1)</option>
+<option value="qa">Qatar (+974)</option>
+<option value="re">Reunion/Mayotte (+262)</option>
+<option value="ro">Romania (+40)</option>
+<option value="ru">Russia/Kazakhstan (+7)</option>
+<option value="rw">Rwanda (+250)</option>
+<option value="ws">Samoa (+685)</option>
+<option value="sm">San Marino (+378)</option>
+<option value="sa">Saudi Arabia (+966)</option>
+<option value="sn">Senegal (+221)</option>
+<option value="rs">Serbia (+381)</option>
+<option value="sc">Seychelles (+248)</option>
+<option value="sl">Sierra Leone (+232)</option>
+<option value="sg">Singapore (+65)</option>
+<option value="sk">Slovakia (+421)</option>
+<option value="si">Slovenia (+386)</option>
+<option value="za">South Africa (+27)</option>
+<option value="es">Spain (+34)</option>
+<option value="lk">Sri Lanka (+94)</option>
+<option value="kn">St Kitts and Nevis (+1)</option>
+<option value="lc">St Lucia (+1)</option>
+<option value="vc">St Vincent Grenadines (+1)</option>
+<option value="sd">Sudan (+249)</option>
+<option value="sr">Suriname (+597)</option>
+<option value="sz">Swaziland (+268)</option>
+<option value="se">Sweden (+46)</option>
+<option value="ch">Switzerland (+41)</option>
+<option value="sy">Syria (+963)</option>
+<option value="tw">Taiwan (+886)</option>
+<option value="tj">Tajikistan (+992)</option>
+<option value="tz">Tanzania (+255)</option>
+<option value="th">Thailand (+66)</option>
+<option value="tg">Togo (+228)</option>
+<option value="to">Tonga (+676)</option>
+<option value="tt">Trinidad and Tobago (+1)</option>
+<option value="tn">Tunisia (+216)</option>
+<option value="tr">Turkey (+90)</option>
+<option value="tc">Turks and Caicos Islands (+1)</option>
+<option value="ug">Uganda (+256)</option>
+<option value="ua">Ukraine (+380)</option>
+<option value="ae">United Arab Emirates (+971)</option>
+<option value="gb">United Kingdom (+44)</option>
+<option selected="selected" value="us">United States (+1)</option>
+<option value="uy">Uruguay (+598)</option>
+<option value="uz">Uzbekistan (+998)</option>
+<option value="ve">Venezuela (+58)</option>
+<option value="vn">Vietnam (+84)</option>
+<option value="vg">Virgin Islands, British (+1)</option>
+<option value="vi">Virgin Islands, U.S. (+1)</option>
+<option value="ye">Yemen (+967)</option>
+<option value="zm">Zambia (+260)</option>
+<option value="zw">Zimbabwe (+263)</option></select>
+                <input type="text" name="phone_number" id="phone-number-d87m9x011lv1" placeholder="ex. 6505551234" data-js-hook="phone-number" class="span12" />
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <!-- tests fail if static width isn't present  ¯\_(ツ)_/¯ -->
+        <button name="button" type="submit" class="flat-button" style="width:225px" id="subscribe-btn-d87m9x011lv1">Subscribe to Incident</button>
+      </div>
+</form>  </div>
+
+        </div>
+
+
+
+        <div class="components-section font-regular">
+    <div class="components-container one-column">
+          <!-- top level group -->
+          <div class="component-container border-color is-group ">
+            
+<div data-component-id="pxs4mnbplvkn"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o"></span>
+
+      <span>
+        Hub Connectivity
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="Problems here can cause hubs to be offline.">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="ttybm8snmy9b"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Problems here can cause hubs to be offline.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="5rmhppqzwzp9"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Problems here can cause hubs to be offline.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <!-- top level group -->
+          <div class="component-container border-color is-group ">
+            
+<div data-component-id="3xvrh2j6z2g6"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o"></span>
+
+      <span>
+        SmartApps
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="SmartApp Execution (includes dashboard configured use cases)">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="l893vxx3z080"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="SmartApp Execution (includes dashboard configured use cases)">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="zyvff3jk7x31"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="SmartApp Execution (includes dashboard configured use cases)">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <!-- top level group -->
+          <div class="component-container border-color is-group open">
+            
+<div data-component-id="vv6dtgh9frns"
+     class="component-inner-container status-yellow "
+     data-component-status="degraded_performance"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-minus-square-o"></span>
+
+      <span>
+        Mobile App Connectivity
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="An outage here will prevent my IOS/Android App from connecting.">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Degraded Performance
+    </span>
+
+    <span class="tool icon-indicator fa fa-minus-square" title="Degraded Performance"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="llqcbwf0dxt9"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="An outage here will prevent my IOS/Android App from connecting.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="7rtlzc0c0svl"
+     class="component-inner-container status-yellow "
+     data-component-status="degraded_performance"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="An outage here will prevent my IOS/Android App from connecting.">?</span>
+    <span class="component-status">
+      Degraded Performance
+    </span>
+
+    <span class="tool icon-indicator fa fa-minus-square" title="Degraded Performance"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <!-- top level group -->
+          <div class="component-container border-color is-group ">
+            
+<div data-component-id="sdvq2pzhlkp3"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o"></span>
+
+      <span>
+        Push Messages
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="On outage here will prevent messages being sent to the mobile client.">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="pqxfw2242ctx"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="On outage here will prevent messages being sent to the mobile client.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="yybkq6vd0g7x"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="On outage here will prevent messages being sent to the mobile client.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <!-- top level group -->
+          <div class="component-container border-color is-group ">
+            
+<div data-component-id="tz6g3fhr6pkz"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o"></span>
+
+      <span>
+        Device Control
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="Control over devices from Mobile Application">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="2b1fbh5913vc"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Control over devices from Mobile Application">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="46s10z6kp0ln"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Control over devices from Mobile Application">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <!-- top level group -->
+          <div class="component-container border-color is-group ">
+            
+<div data-component-id="hhjgtrjdy94d"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o"></span>
+
+      <span>
+        Scheduled SmartApps
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="Things scheduled to run at a specific time of day.">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="n85t0v6bqxcl"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Things scheduled to run at a specific time of day.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="1dk3nfql4116"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Things scheduled to run at a specific time of day.">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <!-- top level group -->
+          <div class="component-container border-color is-group ">
+            
+<div data-component-id="lj95415zlfh4"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+
+    <span class="name">
+      <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o"></span>
+
+      <span>
+        SmartApp Web Services
+      </span>
+    </span>
+
+      <span class="tooltip-base tool" title="Web Service End-Points Served by SmartApps">?</span>
+
+    <span class="component-status tool" title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+</div>
+
+
+            <!-- children components -->
+            <div class="child-components-container ">
+                
+<div data-component-id="tt4s4zb6vkkx"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      North America
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Web Service End-Points Served by SmartApps">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+                
+<div data-component-id="q8t99jhxy0rq"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      UK
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="Web Service End-Points Served by SmartApps">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+            </div>
+          </div>
+          <div class="component-container border-color">
+            
+<div data-component-id="qnvh2zhhbhg9"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      Developer Tools
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="SmartThings IDE &amp;amp; Tools">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+          </div>
+          <div class="component-container border-color">
+            
+<div data-component-id="6z8g4b3yb8th"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      SmartThings.com
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="SmartThings Web Site">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+          </div>
+          <div class="component-container border-color">
+            
+<div data-component-id="69bhqtpyxdhr"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      Shop.SmartThings.com
+      &nbsp;
+    </span>
+
+      <span class="tooltip-base tool" title="SmartThings Store">?</span>
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+          </div>
+          <div class="component-container border-color">
+            
+<div data-component-id="fxbjrsx9g5k8"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+
+    <span class="name">
+      Community Site
+      &nbsp;
+    </span>
+
+    <span class="component-status">
+      Operational
+    </span>
+
+    <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+
+</div>
+
+          </div>
+    </div>
+    <div class="component-statuses-legend font-small">
+      <div class="legend-item status-green">
+        <span class="icon-indicator fa fa-check"></span>
+        Operational
+      </div>
+      <div class="legend-item status-yellow">
+        <span class="icon-indicator fa fa-minus-square"></span>
+        Degraded Performance
+      </div>
+      <div class="legend-item status-orange">
+        <span class="icon-indicator fa fa-exclamation-triangle"></span>
+        Partial Outage
+      </div>
+      <div class="breaker"></div>
+      <div class="legend-item status-red">
+        <span class="icon-indicator fa fa-times"></span>
+        Major Outage
+      </div>
+      <div class="legend-item status-blue">
+        <span class="icon-indicator fa fa-wrench"></span>
+        Maintenance
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      <div class="incidents-list format-expanded">
+        <a class="font-largest no-link" id="past-incidents" href="#past-incidents">Past Incidents</a>
+          
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">22</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-major font-large">
+    <a href="/incidents/ls7hl24yz87g">Issues controlling devices and loading SmartThings Classic and SmartThings app</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	The issues controlling devices, loading the SmartThings apps, and loading the developer interface have been resolved. We sincerely apologize for the inconvenience. Please contact us via support.smartthings.com if you have any questions.
+          <br>
+          <small>
+              Mar 22, 21:40 EDT
+          </small>
+        </div>
+        <div class="update font-regular monitoring">
+            <strong>Monitoring</strong> - 
+        	
+
+          	We have restored full functionality to the SmartThings apps and developer portal. We are continuing to monitor performance and will update with any changes.
+          <br>
+          <small>
+              Mar 22, 17:39 EDT
+          </small>
+        </div>
+        <div class="update font-regular identified">
+            <strong>Identified</strong> - 
+        	
+
+          	We are seeing a large amount of functionality restored to the mobile apps and developer interface, but are continuing to work on restoring full functionality for users. We will continue to provide updates as they are available.
+          <br>
+          <small>
+              Mar 22, 17:08 EDT
+          </small>
+        </div>
+        <div class="update font-regular investigating">
+            <strong>Investigating</strong> - 
+        	
+
+          	Some users may be experiencing issues controlling devices and loading the SmartThings Classic app, the new SmartThings app, and the web developer interface. We are currently investigating and will provide updates as we have them.
+          <br>
+          <small>
+              Mar 22, 16:38 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">21</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a href="/incidents/86xt3mhp6rrp">Errors Creating New Accounts</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	The issue with Samsung accounts is resolved. Please contact us via support.smartthings.com if you have any questions.
+          <br>
+          <small>
+              Mar 21, 00:27 EDT
+          </small>
+        </div>
+        <div class="update font-regular monitoring">
+            <strong>Monitoring</strong> - 
+        	
+
+          	We have identified and released an update to address errors with account creation. We will continue to monitor performance and will update with any changes.
+          <br>
+          <small>
+              Mar 20, 20:19 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Our team is continuing to look into the errors around account creation. We will continue to provide updates on this issue while we investigate.
+          <br>
+          <small>
+              Mar 20, 18:33 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We continue to investigate errors with new account creation via the apps. We will continue to provide updates. In the meantime, users can still create accounts via the web at account.samsung.com.
+          <br>
+          <small>
+              Mar 20, 17:59 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We are continuing to investigate the errors users are seeing while creating accounts on both the new and Classic SmartThings apps. We will continue to provide updates on the issue as we work towards a resolution.
+          <br>
+          <small>
+              Mar 20, 17:25 EDT
+          </small>
+        </div>
+        <div class="update font-regular investigating">
+            <strong>Investigating</strong> - 
+        	
+
+          	Users may be seeing errors when creating new Samsung accounts in the new and Classic SmartThings apps. We are investigating the cause of the errors and will be providing frequent updates while we work to resolve this issue. In the meantime, users can create accounts via the web at account.samsung.com.
+          <br>
+          <small>
+              Mar 20, 16:39 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">20</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a href="/incidents/6xnc6w7smd2k">Low Battery Notifications</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	The issue with low battery notifications is resolved. All users should now expect to receive correct notifications. We sincerely apologize for the inconvenience. Please contact us via support.smartthings.com if you have any questions.
+          <br>
+          <small>
+              Mar 20, 13:29 EDT
+          </small>
+        </div>
+        <div class="update font-regular monitoring">
+            <strong>Monitoring</strong> - 
+        	
+
+          	We implemented new monitoring systems to ensure low battery notifications are correctly delivered. We will continue monitoring performance and reduce the frequency of updates unless there is a change in status.
+          <br>
+          <small>
+              Mar 20, 00:22 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We continue investigating the root cause of the errant “low battery” notifications that were observed yesterday. Low-battery notifications may still be postponed or not sent while we ensure that no further incorrect notifications are sent.
+          <br>
+          <small>
+              Mar 19, 12:30 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We continue to work on the root cause of the issue. During our investigation low-battery notifications may be postponed or not sent. This does not impact any push messages besides low-battery notifications in either SmartThings app (SmartThings or SmartThings Classic). We will provide another update tomorrow morning.
+          <br>
+          <small>
+              Mar 19, 00:20 EDT
+          </small>
+        </div>
+        <div class="update font-regular identified">
+            <strong>Identified</strong> - 
+        	
+
+          	We have identified an issue causing errant “low battery” notifications to be sent to a small number of users. We’ve taken steps to ensure no further similar notifications are sent and are working to identify the root cause.
+          <br>
+          <small>
+              Mar 18, 17:28 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+
+          
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">17</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a href="/incidents/2n85wm8nsktm">Device Status and Control Issues</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	Operation of the new SmartThings app is back to normal. We sincerely apologize for the inconvenience. Please contact us via support.smartthings.com if you have any questions.
+          <br>
+          <small>
+              Mar 17, 01:49 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Device control and status reporting in the new SmartThings app has been restored. We are continuing to monitor performance and will update with changes.
+          <br>
+          <small>
+              Mar 17, 01:13 EDT
+          </small>
+        </div>
+        <div class="update font-regular monitoring">
+            <strong>Monitoring</strong> - 
+        	
+
+          	We are seeing improved device control and status reporting in the new SmartThings app. We are continuing to monitor performance, and will update with any changes.
+          <br>
+          <small>
+              Mar 17, 00:51 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We are continuing to see performance issues with the new SmartThings app. The SmartThings classic app remains unaffected. We are reducing the cadence of updates while we identify options to restore full functionality.
+          <br>
+          <small>
+              Mar 16, 22:41 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We are seeing continued performance issues with the new SmartThings app. Our team is working towards a resolution and we will continue providing updates while we investigate.
+          <br>
+          <small>
+              Mar 16, 22:12 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We continue to see degraded performance and are working towards a resolution. Updates to follow.
+          <br>
+          <small>
+              Mar 16, 21:42 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We are continuing to work towards restoring full functionality to the new SmartThings app. We will continue to provide updates as they are available.
+          <br>
+          <small>
+              Mar 16, 21:12 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Our teams are continuing to work on resolving the issues in the new SmartThings app. We will continue to provide updates on the situation.
+          <br>
+          <small>
+              Mar 16, 20:43 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Please note this issue can also cause trouble logging in to the new SmartThings app. SmartThings Classic login, device control and statuses remain unaffected.
+          <br>
+          <small>
+              Mar 16, 20:14 EDT
+          </small>
+        </div>
+        <div class="update font-regular identified">
+            <strong>Identified</strong> - 
+        	
+
+          	We have identified the issues related to device status and control in the new SmartThings app and are taking steps to resolve. We will provide more updates as they are available.
+          <br>
+          <small>
+              Mar 16, 19:47 EDT
+          </small>
+        </div>
+        <div class="update font-regular investigating">
+            <strong>Investigating</strong> - 
+        	
+
+          	We have identified issues with device statuses and commands in the new SmartThings app. We are investigating and will provide updates within 30 minutes.
+          <br>
+          <small>
+              Mar 16, 19:23 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">16</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a href="/incidents/zxjm1ryxd4pn">Device Status and Control Issues</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	Device statuses and commands in the new SmartThings app have been restored. We sincerely apologize for the inconvenience. Please contact us via support.smartthings.com if you have any questions.
+          <br>
+          <small>
+              Mar 16, 00:02 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Device control and status reporting in the new SmartThings app continues to be normal. We are continuing to monitor systems, and will be reducing the frequency of updates unless there is a change in status.
+          <br>
+          <small>
+              Mar 15, 22:29 EDT
+          </small>
+        </div>
+        <div class="update font-regular monitoring">
+            <strong>Monitoring</strong> - 
+        	
+
+          	Device control and status reporting in the new SmartThings app has been restored. We are continuing to monitor performance and will update accordingly.
+          <br>
+          <small>
+              Mar 15, 21:59 EDT
+          </small>
+        </div>
+        <div class="update font-regular identified">
+            <strong>Identified</strong> - 
+        	
+
+          	We have identified the issues related to device status and control in the new SmartThings app and are taking steps to resolve. We will provide more updates as they are available.
+          <br>
+          <small>
+              Mar 15, 21:30 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We continue to investigate the root cause of the issues. We’ll continue to provide regular updates as we have more to share.
+          <br>
+          <small>
+              Mar 15, 20:59 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	We have identified that issues relate to OCF-based devices, which include connected appliances, but are causing loading trouble for most device types in the new SmartThings app. We are continuing to work to resolve the issue.
+          <br>
+          <small>
+              Mar 15, 20:32 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Our team continues to investigate the cause of device status and control issues in the new SmartThings app. These issues are not impacting device control or statuses in SmartThings Classic.
+          <br>
+          <small>
+              Mar 15, 20:01 EDT
+          </small>
+        </div>
+        <div class="update font-regular investigating">
+            <strong>Investigating</strong> - 
+        	
+
+          	We have identified issues with device statuses and commands in the new SmartThings app. We are investigating and will provide updates within 30 minutes.
+          <br>
+          <small>
+              Mar 15, 19:31 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Mar <var data-var="date">14</var>, <var data-var="year">2018</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">13</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a href="/incidents/rmdt2tr7m0l9">Platform Outage</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	Correction: Issues accessing the SmartThings Apps and controlling devices began around 12:30 PM PT yesterday. Issues are now resolved for all users. We have identified the root cause of the issue and implemented fixes to ensure stability.
+<br />
+<br />For more information please see our blog post here: <a target="_blank" href="https://blog.smartthings.com/news/smartthings-updates/platform-outage-update/">https://blog.smartthings.com/news/smartthings-updates/platform-outage-update/</a>
+          <br>
+          <small>
+              Mar 13, 21:41 EDT
+          </small>
+        </div>
+        <div class="update font-regular monitoring">
+            <strong>Monitoring</strong> - 
+        	
+
+          	Last night around 5:27 PM PT, we experienced an outage that impacted US users ability to log in to the SmartThings mobile apps and control devices. These issues intermittently persisted until 9:16 PM PT, at which time the root cause of the outage was addressed, and users were able to control devices and access the SmartThings apps.
+<br />
+<br />Issues persisted for a small subset of those users, specifically related to installing and editing automations until 8:09 AM PT this morning. As of 8:09 AM PT, all US operations are performing as expected and we continue to closely monitor our systems.
+<br />
+<br />If you have any questions, please reach out to us at <a target="_blank" href="https://support.smartthings.com">https://support.smartthings.com</a>.
+          <br>
+          <small>
+              Mar 13, 17:07 EDT
+          </small>
+        </div>
+        <div class="update font-regular identified">
+            <strong>Identified</strong> - 
+        	
+
+          	The issues impacting North American users have been largely addressed and we are seeing improvements to app loading and device control. Our teams are continuing to work on restoring full functionality and will provide an update when available.
+          <br>
+          <small>
+              Mar 13, 13:31 EDT
+          </small>
+        </div>
+        <div class="update font-regular update">
+            <strong>Update</strong> - 
+        	
+
+          	Our team continues to investigate the issues impacting North American users. We apologize for the inconvenience.
+          <br>
+          <small>
+              Mar 12, 22:25 EDT
+          </small>
+        </div>
+        <div class="update font-regular investigating">
+            <strong>Investigating</strong> - 
+        	
+
+          	Users may be unable to load the SmartThings app, control devices, or access the web UI. We are currently investigating.
+          <br>
+          <small>
+              Mar 12, 16:27 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Mar <var data-var="date">12</var>, <var data-var="year">2018</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a href="/incidents/c7brn6d214lm">Customer Support Outage</a>
+  </div>
+
+    <div class="updates-container">
+        <div class="update font-regular resolved">
+            <strong>Resolved</strong> - 
+        	
+
+          	Our North American support center connectivity is restored. You can reach out to us at <a target="_blank" href="https://support.smartthings.com">https://support.smartthings.com</a> via phone or live chat starting tomorrow at 9 am Pacific. If you emailed us in the meantime, we will respond as soon as possible. Thank you for your patience.
+          <br>
+          <small>
+              Mar 12, 22:24 EDT
+          </small>
+        </div>
+        <div class="update font-regular investigating">
+            <strong>Investigating</strong> - 
+        	
+
+          	Our support center is currently unable to answer calls or receive live chats. For assistance via email, please reach out to us at <a target="_blank" href="https://support.smartthings.com">https://support.smartthings.com</a>.
+          <br>
+          <small>
+              Mar 12, 17:00 EDT
+          </small>
+        </div>
+    </div>
+  
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Mar <var data-var="date">11</var>, <var data-var="year">2018</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Mar <var data-var="date">10</var>, <var data-var="year">2018</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Mar <var data-var="date"> 9</var>, <var data-var="year">2018</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+      </div>
+
+
+      <div class="page-footer border-color font-small">
+          <a href="/history" class="history-footer-link"><span style="font-family:arial">&larr;</span> Incident History</a>
+
+        <span class="color-secondary powered-by">Powered by
+          <a href="https://www.statuspage.io/?utm_source=inapp&utm_medium=powered-by&utm_campaign=status.smartthings.com&utm_content=status-pages" target="_blank" class="color-secondary">Statuspage</a>
+        </span>
+      </div>
+    </div>
+
+      <div class="custom-footer-container">
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M4C995"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4C995');</script>
+<!-- End Google Tag Manager -->
+  </div>
+
+
+  </div>
+
+
+
+<!-- custom metrics stuff -->
+
+
+
+
+
+    <script src="https://dka575ofm4ao0.cloudfront.net/assets/status_manifest-c88bf7a922b1e235b38ff0a05dd293367682b4bd68c6fedb897b90fb371a5ea1.js"></script>
+    
+
+
+
+
+    <!-- all of the content_for stuff -->
+      <script src="https://dka575ofm4ao0.cloudfront.net/assets/register_subscription_form-e575a347f0ec729f9d008fd13c3cdbe466737c6ffa3d11619aedbb6a247e179a.js"></script>
+
+  <script type="text/javascript">
+      $(function() {
+          SP.currentPage.registerSubscriptionForm('email');
+
+          SP.currentPage.registerSubscriptionForm('sms');
+
+      });
+
+
+
+        $(function() {
+            SP.currentPage.registerSubscriptionForm('d87m9x011lv1');
+        });
+
+
+
+  </script>
+  <script src="https://dka575ofm4ao0.cloudfront.net/assets/status_common-f8b35586d7e6820c2761e822c9860a9ad5f3706467a0f2ea792990ed76958f20.js"></script>
+
+    <script src="https://dka575ofm4ao0.cloudfront.net/assets/status_live_incident-a973d5e16712ff0d707e9fa927323819596dffbf4c9379d3d78f9271b60b55f9.js"></script>
+    <script>
+      page_refresh_interval = 60;
+    </script>
+
+  <script>
+    $(function() {
+
+      $('.tool').tooltipster({
+        animationDuration: 100,
+        contentAsHTML: true,
+        delay: 100,
+        theme: 'tooltipster-borderless',
+        functionInit: function (instance, helper) {
+          var $origin = $(helper.origin),
+              dataOptions = $origin.attr('data-tooltip-config');
+          if (dataOptions){
+            dataOptions = JSON.parse(dataOptions);
+            $.each(dataOptions, function(name, option){
+                instance.option(name, option);
+            });
+          }
+        }
+      });
+
+      var NON_OPERATIONAL_STATUSES = ['major_outage', 'partial_outage'];
+
+      // Returns an array of components in a non-operational state
+      function nonOperationalComponents (components) {
+        var result = [];
+        for (var i = 0; i < components.length; i++) {
+          var status = components[i].getAttribute('data-component-status');
+          if (~NON_OPERATIONAL_STATUSES.indexOf(status)) {
+            result.push(components[i]);
+          }
+        }
+        return result;
+      }
+
+      // Update the given component's tooltips to represent accurate update deltas
+      function updateShowcasedComponents (components) {
+        for (var i = 0; i < components.length; i++) {
+          updateComponentToolTip(components[i])
+        }
+      }
+
+      // Returns the client's current epoch time
+      function currentTime () {
+        return Math.floor((new Date).getTime() / 1000);
+      }
+
+      // Returns the last (today's) rect for a given component
+      function todaysRect (component) {
+        var rects = component.getElementsByTagName('rect');
+        return rects[rects.length - 1];
+      }
+
+      // Parses the components current status
+      function componentStatus (component) {
+        return component.getAttribute('data-component-status');
+      }
+
+      // Parses the issued meta tag an returns the epoch time stamp
+      function pageUpdatedAt () {
+        var metas = document.getElementsByTagName('meta');
+        for (var i = 0; i < metas.length; i++) {
+          if (metas[i].getAttribute('name') === 'issued') {
+            return parseInt(metas[i].getAttribute('content'));
+          }
+        }
+        return currentTime();
+      }
+
+      // Returns a rect's tooltip instance
+      function tooltipInstance (rect) {
+        return $(rect).tooltipster('instance');
+      }
+
+      // Returns a time object representing the time since the page has been cached,
+      // according to the browser
+      function timeSinceUpdate () {
+        var minutesSinceUpdate = Math.round((currentTime() - pageUpdatedAt()) / 60);
+
+        return {
+          hours: Math.floor(minutesSinceUpdate / 60),
+          minutes: minutesSinceUpdate % 60,
+        };
+      }
+
+      // Parse a status substring, and return a time object
+      function timeFromString (string) {
+        var hourMatch = string.match(/(\d+)h/);
+        var minuteMatch = string.match(/(\d+)m/);
+        var hours = hourMatch ? parseInt(hourMatch[1]) : 0;
+        var minutes = minuteMatch ? parseInt(minuteMatch[1]) : 0;
+
+        return {
+          hours: hours,
+          minutes: minutes,
+        };
+      }
+
+      // Merge two time objects
+      function increasedTimeBy(time, update) {
+        var minutes = (time.hours * 60) + time.minutes;
+        var updatedMinutes = ((update.hours * 60) + update.minutes) + minutes;
+
+        return {
+          hours: Math.floor(updatedMinutes / 60),
+          minutes: updatedMinutes % 60
+        };
+      }
+
+      // outputs a status substring, given a status and time object
+      // ex. '2h 31m of major outage'
+      function durationOfStatus(status, time) {
+        var output = [];
+        if (time.hours > 0) output.push(time.hours + 'h')
+        if (time.minutes > 0) output.push(time.minutes + 'm');
+        output.push('of');
+        output.push(status.replace('_', ' '));
+        return output.join(' ');
+      }
+
+      function updateComponentToolTip (component) {
+        // Grab the current status we're operating on
+        var currentStatus = componentStatus(component);
+        // The last rect (today) is the tooltip we need to update
+        var lastRect = todaysRect(component);
+        var tooltip = tooltipInstance(lastRect);
+        var title = String(tooltip.content());
+
+        // Since the tooltip content is xml, we need to create a document so we can operate on what we need
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(title, 'text/xml');
+
+        // Grab the status substring
+        var currentStatusNode = $(xml).find('span[data-status="' + currentStatus + '"]');
+        var newTitle = currentStatusNode.text();
+
+        // What time does the status substring show right now?
+        var initialTime = timeFromString(newTitle);
+        // How long has it been since the app cached this page?
+        var timeSincePageUpdate =timeSinceUpdate();
+
+        // If we have a delta since caching, we update the tooltip text to show an accurate delta
+        if (timeSincePageUpdate.minutes > 0 || timeSincePageUpdate.hours > 0) {
+          var newTime = increasedTimeBy(initialTime, timeSincePageUpdate);
+          currentStatusNode.text(durationOfStatus(currentStatus, newTime));
+        }
+
+        // Serialize our document and update the tooltip
+        var oSerializer = new XMLSerializer();
+        var sXML = oSerializer.serializeToString(xml);
+        tooltip.content(sXML);
+      }
+
+      var showcasedComponents = document.getElementsByClassName('component-inner-container showcased');
+      var affectedComponents = nonOperationalComponents(showcasedComponents);
+
+      updateShowcasedComponents(affectedComponents);
+
+
+      // clicks on first tab in subscribe popout since we won't know which is first
+      // upon construction in the ruby code
+      $('.updates-dropdown-nav > a').eq(0).click();
+
+      // twitter follow button needs some margin
+      $('.twitter-follow-button').css('margin-right', '6px');
+    });
+
+    $(function() {
+      // open/close component groups
+      HRB.utils.djshook('component-group-opener').on('click', function() {
+        $(this).find('.group-parent-indicator').toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o').end().parent().toggleClass('open');
+      });
+    });
+
+  </script>
+
+
+        <script src="https://dka575ofm4ao0.cloudfront.net/packs/common-90b696cd4cc3969ce6a8.js"></script>
+    <script src="https://dka575ofm4ao0.cloudfront.net/packs/globals-3e678d175b270da6d3c3.js"></script>
+  <script src="https://dka575ofm4ao0.cloudfront.net/assets/react_ujs-01c0ac06d0ec27d6d087274ad91ab292aceaeef536272c1acee75be149a350fd.js"></script>
+
+
+    
+
+
+<!-- FOR FLASH NOTICES -->
+
+
+
+<!-- FOR ERROR -->
+
+
+
+    <script>
+  $(function() {
+  	var $link = $('<span class="color-secondary powered-by">Powered by <a href="http://www.statuspage.io" target="_blank" class="color-secondary">Statuspage</a></span>');
+
+  	var setPoweredByStyles = function() {
+  		if (!$('.powered-by').length) {
+  			$link.appendTo($('.page-footer'))
+  		}
+  		$('.powered-by').attr('style', 'display: inline !important; visibility:visible !important; opacity: 1 !important; position:static !important; text-indent:0px !important; transform:scale(1) !important');
+  	}
+  	
+  	setInterval(setPoweredByStyles, 1000);
+  });
+</script>
+
+
+      <script type="text/javascript">
+        $(window).load(function() {
+          $("body").append("<img style=\"display: none;\" src=\"//ua.statuspage.io/ua?page_code=mf6lzdpt63q3&amp;organization_code=mk75zb5v5zlf&amp;paid=true\" />");
+        });
+      </script>
+
+
+
+
+
+  </body>
+</html>
